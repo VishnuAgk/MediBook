@@ -1,0 +1,17 @@
+<?php
+session_start(); require_once dirname(__DIR__, 2) . '/db.php';
+if(!isset($_SESSION['user'])){header('Location: login.php');exit;}
+$doctors=mongoFind('doctors'); $services=mongoFind('services');
+$doctorCats=[];foreach($doctors as $d){$category=$d['category']??'Other';$doctorCats[$category]=true;}
+$scanCats=['MRI & Imaging','CT & Imaging','Ultrasound & X-Ray'];$testCats=['Blood Tests','Organ Function Tests','Hormone & Vitamin Tests','Cardiac Tests','Health Checkups'];
+$scans=array_values(array_filter($services,fn($s)=>in_array($s['category']??'',$scanCats,true)));$tests=array_values(array_filter($services,fn($s)=>in_array($s['category']??'',$testCats,true)));
+?>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MediBook - Aster MIMS Kannur</title><link rel="stylesheet" href="assets/css/style.css"></head><body class="soft-page">
+<?php $activeNav = 'home'; require dirname(__DIR__) . '/components/navbar.php'; ?>
+<main class="portal-main"><section class="home-hero"><div class="home-copy"><p class="eyebrow">ASTER MIMS · KANNUR</p><h1>Your healthcare, <span>simpler.</span></h1><p>Book doctor consultations, diagnostic scans and medical tests online — without waiting in a physical queue.</p><div class="hero-actions"><a class="btn-primary" href="consult_doctor.php">Consult a Doctor</a><a class="btn-secondary" href="scanning.php">Explore Services</a></div><div class="trust-row"><span>✓ <?php echo count($doctors); ?> specialists</span><span>✓ 30-minute slots</span><span>✓ Online booking</span></div></div><div class="home-visual"><img src="assets/images/doctor-consultation.png" alt="Doctor consulting a patient"><div class="floating-card"><b>Easy appointment booking</b><span>Doctor · Scan · Test</span></div></div></section>
+<section class="section compact"><div class="section-heading center-heading"><p class="eyebrow">HOW CAN WE HELP?</p><h2>Choose a service</h2><p>Each service has its own simple booking flow.</p></div><div class="main-service-grid">
+<a class="main-service-card doctor-theme" href="consult_doctor.php"><div class="service-illustration">👨‍⚕️</div><div><span class="eyebrow">01 · CONSULTATION</span><h3>Consult a Doctor</h3><p>Choose a department, specialist and available appointment token.</p><strong><?php echo count($doctors); ?> doctors · <?php echo count($doctorCats); ?> departments →</strong></div></a>
+<a class="main-service-card scan-theme" href="scanning.php"><div class="service-illustration">🩻</div><div><span class="eyebrow">02 · IMAGING</span><h3>Scanning</h3><p>Book MRI, CT, ultrasound and X-ray services separately.</p><strong><?php echo count($scans); ?> scan services →</strong></div></a>
+<a class="main-service-card test-theme" href="testing.php"><div class="service-illustration">🧪</div><div><span class="eyebrow">03 · LABORATORY</span><h3>Medical Testing</h3><p>Book blood tests, organ-function tests and health checkups.</p><strong><?php echo count($tests); ?> test services →</strong></div></a>
+</div></section>
+<section class="hospital-strip"><div><p class="eyebrow">ONE PLACE FOR YOUR VISIT</p><h2>Aster MIMS, Kannur</h2><p>Separate booking paths for consultations, scanning and laboratory testing make it easier to find exactly what you need.</p></div><a href="mybookings.php" class="btn-secondary">View My Appointments</a></section></main><footer class="footer">© <?php echo date('Y'); ?> MediBook · Aster MIMS Appointment Booking Prototype</footer></body></html>
