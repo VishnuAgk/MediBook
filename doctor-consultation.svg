@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Doctor consultation</title>
+  <desc id="desc">A doctor speaks with a patient in a bright clinic.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5faf5"/>
+      <stop offset="1" stop-color="#eef1ff"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e5eef8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="651" cy="116" r="52" fill="#fff" opacity=".62"/>
+  <circle cx="112" cy="456" r="83" fill="#c6eee6" opacity=".62"/>
+  <path d="M0 495c124-42 235-52 350-14s291 49 450-9v128H0z" fill="#d7eee9" opacity=".65"/>
+  <rect x="111" y="112" width="577" height="351" rx="30" fill="#fff" opacity=".54"/>
+  <rect x="153" y="151" width="185" height="148" rx="18" fill="#d8f2ed"/>
+  <path d="M170 279l51-62 36 39 31-45 34 68z" fill="#9ad8cb"/>
+  <circle cx="285" cy="185" r="19" fill="#f3ca8e"/>
+  <path d="M270 181c2-21 30-25 37-6-7-5-16-6-24-2l-13 8z" fill="#466b76"/>
+  <rect x="390" y="170" width="220" height="14" rx="7" fill="#dce8ed"/>
+  <rect x="390" y="202" width="183" height="11" rx="6" fill="#e8eff3"/>
+  <rect x="390" y="228" width="201" height="11" rx="6" fill="#e8eff3"/>
+  <rect x="390" y="254" width="142" height="11" rx="6" fill="#e8eff3"/>
+  <rect x="461" y="283" width="155" height="52" rx="16" fill="#e7f8f5"/>
+  <path d="M481 309h18l9-13 13 24 10-16h20" fill="none" stroke="#20a89c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Patient -->
+  <path d="M141 505c14-87 58-128 133-128 65 0 111 45 126 128z" fill="#6c91bb"/>
+  <path d="M208 394c18-20 37-30 66-30 30 0 53 12 70 33l-26 70H231z" fill="#f1bd88"/>
+  <ellipse cx="274" cy="314" rx="62" ry="72" fill="#f3c995"/>
+  <path d="M213 313c-5-65 27-100 71-100 48 0 70 39 63 94-13-4-24-18-27-40-24 23-62 39-107 39z" fill="#344f65"/>
+  <path d="M230 388l44 53 43-54 29 18-28 100H221l-26-99z" fill="url(#coat)"/>
+  <path d="M267 441h14l16 62h-45z" fill="#20a89c"/>
+  <path d="M303 433c46 2 83-23 90-60" fill="none" stroke="#118d8a" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="393" cy="369" r="13" fill="none" stroke="#118d8a" stroke-width="7"/>
+  <!-- Doctor -->
+  <path d="M424 510c10-87 52-128 126-128 72 0 116 47 128 128z" fill="#138e88"/>
+  <ellipse cx="550" cy="315" rx="59" ry="69" fill="#c9865f"/>
+  <path d="M491 310c-3-57 20-95 65-95 45 0 65 34 59 88-22-3-41-17-53-36-16 21-40 36-71 43z" fill="#293c52"/>
+  <path d="M500 382l50 56 51-56 33 24-19 104H474l-15-104z" fill="url(#coat)"/>
+  <path d="M543 439h15l15 71h-46z" fill="#20a89c"/>
+  <path d="M549 441v-23" stroke="#20a89c" stroke-width="5" stroke-linecap="round"/>
+  <rect x="585" y="410" width="42" height="56" rx="8" fill="#fff" stroke="#cddbe5" stroke-width="4"/>
+  <path d="M593 426h26M593 438h20M593 450h23" stroke="#20a89c" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="647" cy="479" r="20" fill="#d8f3ed"/>
+  <path d="M647 469v20m-10-10h20" stroke="#179a91" stroke-width="5" stroke-linecap="round"/>
+</svg>
